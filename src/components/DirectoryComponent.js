@@ -1,24 +1,13 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
-import LocationInfo from './LocationInfoComponent';
+
 
 class Directory extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedLocation: null
-        };
-    }
-
-    onLocationSelect(location) {
-        this.setState({ selectedLocation: location });
-    }
-
     render() {
         const directory = this.props.locations.map(location => {
             return (
                 <div key={location.id} className="col-md-5 m-1">
-                    <Card onClick={() => this.onLocationSelect(location)}>
+                    <Card onClick={() => this.props.onClick(location.id)}>
                         <CardImg src={location.image} alt={location.name} />
                         <CardImgOverlay>
                             <CardTitle>{location.name}</CardTitle>
@@ -33,7 +22,6 @@ class Directory extends Component {
                 <div className="row">
                     {directory}
                 </div>
-                <LocationInfo location={this.state.selectedLocation}></LocationInfo>
             </div>
         );
     }

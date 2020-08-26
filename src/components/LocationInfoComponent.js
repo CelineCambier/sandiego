@@ -37,13 +37,16 @@ class LocationInfo extends Component {
 
     render() {
         if (this.props.location) {
-            return <div className="row">
-                {this.renderLocation(this.props.location)}
-                {this.renderComments(this.props.location.comments)}
-            </div>;
-        } else {
-            return <div />;
+            return (
+                <div className="container">
+                    <div className="row">
+                        {this.renderLocation(this.props.location)}
+                        {this.renderComments(this.props.location.comments)}
+                    </div>
+                </div>
+            );
         }
+        return <div />;
     }
 }
 
