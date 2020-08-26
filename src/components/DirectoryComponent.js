@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
-function RenderDirectoryItem({ location, onClick }) {
+function RenderDirectoryItem({ location }) {
     return (
-        <Card onClick={() => onClick(location.id)}>
+        <Card>
             <CardImg src={location.image} alt={location.name} />
             <CardImgOverlay>
                 <CardTitle>{location.name}</CardTitle>
@@ -17,7 +17,7 @@ function Directory(props) {
     const directory = props.locations.map(location => {
         return (
             <div key={location.id} className="col-md-5 m-1">
-                <RenderDirectoryItem location={location} onClick={props.onClick} />
+                <RenderDirectoryItem location={location} />
             </div>
         );
     });

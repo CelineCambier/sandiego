@@ -1,29 +1,37 @@
 import React, { Component } from 'react';
 import Directory from './DirectoryComponent';
-import { LOCATIONS } from '../shared/locations';
+//import LocationInfo from './LocationInfoComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
-import LocationInfo from './LocationInfoComponent';
+import Home from './HomeComponent';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import { LOCATIONS } from '../shared/locations';
 
 class Main extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
             locations: LOCATIONS,
-            selectedLocation: null
         };
     }
 
-    onLocationSelect(locationId) {
-        this.setState({ selectedLocation: locationId });
-    }
-
     render() {
+
+        const HomePage = () => {
+            return (
+                <Home />
+            );
+        }
+
         return (
             <div>
                 <Header />
-                <Directory locations={this.state.locations} onClick={(locationId) => this.onLocationSelect(locationId)} />
-                <LocationInfo location={this.state.locations.filter(location => location.id === this.state.selectedLocation)[0]} />
+                <Switch>
+                    <Route path='/home' component={HomePage} />
+                    <Route exact path='/directory' render={() => <Directory locations={this.state.locations} />} />
+                    <Redirect to='/home' />
+                </Switch>
                 <Footer />
             </div>
         );
