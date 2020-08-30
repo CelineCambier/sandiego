@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Directory from './DirectoryComponent';
-//import LocationInfo from './LocationInfoComponent';
+import LocationInfo from './LocationInfoComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
@@ -10,7 +10,6 @@ import { LOCATIONS } from '../shared/locations';
 import { COMMENTS } from '../shared/comments';
 import { PARTNERS } from '../shared/partners';
 import { PROMOTIONS } from '../shared/promotions';
-
 
 class Main extends Component {
 
@@ -36,12 +35,22 @@ class Main extends Component {
             );
         }
 
+        const LocationWithId = ({ match }) => {
+            return (
+                <LocationInfo
+                    location={this.state.locations.filter(location => location.id === +match.params.locationId)[0]}
+                    comments={this.state.comments.filter(comment => comment.locationId === +match.params.locationId)}
+                />
+            );
+        }
+
         return (
             <div>
                 <Header />
                 <Switch>
                     <Route path='/home' component={HomePage} />
                     <Route exact path='/directory' render={() => <Directory locations={this.state.locations} />} />
+                    <Route path='/directory/:locationId' component={LocationWithId} />
                     <Route exact path='/contactus' component={Contact} />
                     <Redirect to='/home' />
                 </Switch>

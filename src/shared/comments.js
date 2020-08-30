@@ -11,22 +11,22 @@ export const COMMENTS =
         {
             id: 1,
             locationId: 0,
-            rating: 4,
-            text: "The campground was beautiful, but the bugs could bite sometimes.",
-            author: "Brennen Ech",
-            date: "2017-06-17T03:33Z"
+            rating: 5,
+            text: "A wonderful place to reconnect with nature.",
+            author: "Jordan Runn",
+            date: "2019-08-04T20:11Z"
         },
         {
             id: 2,
             locationId: 0,
-            rating: 5,
-            text: "I caught a world-record-breaking trout here on my last visit.",
-            author: "McKenzie Sebastian",
-            date: "2019-02-18T18:12Z"
+            rating: 4,
+            text: "The stars at night were a revelation!",
+            author: "Ann Dabramov",
+            date: "2018-07-23T19:44Z"
         },
         {
             id: 3,
-            locationId: 0,
+            locationId: 1,
             rating: 5,
             text: "A wonderful place to reconnect with nature.",
             author: "Jordan Runn",
@@ -34,7 +34,7 @@ export const COMMENTS =
         },
         {
             id: 4,
-            locationId: 0,
+            locationId: 1,
             rating: 4,
             text: "The stars at night were a revelation!",
             author: "Ann Dabramov",
@@ -44,52 +44,36 @@ export const COMMENTS =
             id: 5,
             locationId: 1,
             rating: 5,
+            text: "What a magnificent view!",
+            author: "Tinus Lorvaldes",
+            date: "2018-10-25T16:30Z"
+        },
+        {
+            id: 6,
+            locationId: 2,
+            rating: 5,
             text: "A wonderful place to reconnect with nature.",
             author: "Jordan Runn",
             date: "2019-08-04T20:11Z"
         },
         {
-            id: 6,
-            locationId: 1,
+            id: 7,
+            locationId: 2,
             rating: 4,
             text: "The stars at night were a revelation!",
             author: "Ann Dabramov",
             date: "2018-07-23T19:44Z"
-        },
-        {
-            id: 7,
-            locationId: 1,
-            rating: 5,
-            text: "What a magnificent view!",
-            author: "Tinus Lorvaldes",
-            date: "2018-10-25T16:30Z"
         },
         {
             id: 8,
             locationId: 2,
             rating: 5,
-            text: "A wonderful place to reconnect with nature.",
-            author: "Jordan Runn",
-            date: "2019-08-04T20:11Z"
-        },
-        {
-            id: 9,
-            locationId: 2,
-            rating: 4,
-            text: "The stars at night were a revelation!",
-            author: "Ann Dabramov",
-            date: "2018-07-23T19:44Z"
-        },
-        {
-            id: 10,
-            locationId: 2,
-            rating: 5,
             text: "What a magnificent view!",
             author: "Tinus Lorvaldes",
             date: "2018-10-25T16:30Z"
         },
         {
-            id: 11,
+            id: 9,
             locationId: 3,
             rating: 5,
             text: "A wonderful place to reconnect with nature.",
@@ -97,7 +81,7 @@ export const COMMENTS =
             date: "2019-08-04T20:11Z"
         },
         {
-            id: 12,
+            id: 10,
             locationId: 3,
             rating: 4,
             text: "The stars at night were a revelation!",
@@ -105,7 +89,7 @@ export const COMMENTS =
             date: "2018-07-23T19:44Z"
         },
         {
-            id: 13,
+            id: 11,
             locationId: 3,
             rating: 5,
             text: "What a magnificent view!",

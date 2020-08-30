@@ -41,7 +41,7 @@ function LocationInfo(props) {
             <div className="container">
                 <div className="row">
                     <RenderLocation location={props.location} />
-                    <RenderComments comments={props.location.comments} />
+                    <RenderComments comments={props.comments} />
                 </div>
             </div>
         );
