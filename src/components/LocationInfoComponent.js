@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 function RenderLocation({ location }) {
     return (
@@ -7,7 +8,6 @@ function RenderLocation({ location }) {
             <Card>
                 <CardImg top src={location.image} alt={location.name} />
                 <CardBody>
-                    <CardTitle>{location.name}</CardTitle>
                     <CardText>{location.description}</CardText>
                 </CardBody>
             </Card>
@@ -40,9 +40,17 @@ function LocationInfo(props) {
         return (
             <div className="container">
                 <div className="row">
-                    <RenderLocation location={props.location} />
-                    <RenderComments comments={props.comments} />
+                    <div className="col">
+                        <Breadcrumb>
+                            <BreadcrumbItem><Link to="/directory">Directory</Link></BreadcrumbItem>
+                            <BreadcrumbItem active>{props.location.name}</BreadcrumbItem>
+                        </Breadcrumb>
+                        <h2>{props.location.name}</h2>
+                        <hr />
+                    </div>
                 </div>
+                <RenderLocation location={props.location} />
+                <RenderComments comments={props.comments} />
             </div>
         );
     }
