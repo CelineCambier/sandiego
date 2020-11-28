@@ -7,6 +7,13 @@ export const PARTNERS = [
         description: "Best expedition in the country."
     },
     {
+        id: 3,
+        name: "Balboa Park museum",
+        image: "/assets/images/bp-logo.png",
+        featured: true,
+        description: "Come to visit us in our museums. Free on Thrusday!"
+    },
+    {
         id: 1,
         name: "San diego zoo VIP visit",
         image: "/assets/images/zoo-logo.png",
@@ -20,11 +27,5 @@ export const PARTNERS = [
         featured: false,
         description: "Need a hat, a swimsuit, or sunscreen? Stop by San Diego Shop."
     },
-    {
-        id: 3,
-        name: "Balboa Park museum",
-        image: "/assets/images/bp-logo.png",
-        featured: true,
-        description: "Come to visit us in our museums. Free on Thrusday!."
-    }
+
 ]

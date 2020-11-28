@@ -53,7 +53,7 @@ class Main extends Component {
                     <Route exact path='/directory' render={() => <Directory locations={this.state.locations} />} />
                     <Route path='/directory/:locationId' component={LocationWithId} />
                     <Route exact path='/contactus' component={Contact} />
-                    <Route exact path='/aboutus'render={() => <About partners={this.state.partners}/>} />
+                    <Route exact path='/aboutus' render={() => <About partners={this.state.partners} />} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />

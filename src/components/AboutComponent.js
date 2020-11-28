@@ -43,8 +43,9 @@ function About(props) {
             </div>
             <div className="row row-content">
                 <div className="col-sm-6">
-                    <h3>Our Mission</h3>
-                    <p>We present a curated database of the best campsites in the vast woods and backcountry of the World Wide Web Wilderness. We increase access to adventure for the public while promoting safe and respectful use of resources. The expert wilderness trekkers on our staff personally verify each campsite to make sure that they are up to our standards. We also present a platform for campers to share reviews on campsites they have visited with each other.</p>
+                    <p>California's second largest city and the United States' eighth largest, San Diego boasts a citywide population of nearly 1.3 million residents and more than 3 million residents countywide. Within its borders of 4,200 sq. miles, San Diego County encompasses 18 incorporated cities and numerous other charming neighborhoods and communities, including downtown's historic Gaslamp Quarter, Little Italy, Coronado, La Jolla, Del Mar, Carlsbad, Escondido, La Mesa, Hillcrest, Barrio Logan and Chula Vista just to name a few.
+
+San Diego is renowned for its idyllic climate, 70 miles of pristine beaches and a dazzling array of world-class family attractions. Popular attractions include the world-famous San Diego Zoo and San Diego Zoo Safari Park, SeaWorld San Diego and LEGOLAND California. San Diego offers an expansive variety of things to see and do, appealing to guests of all ages from around the world.</p>
                 </div>
                 <div className="col-sm-6">
                     <Card>
@@ -53,8 +54,8 @@ function About(props) {
                             <dl className="row">
                                 <dt className="col-6">Founded</dt>
                                 <dd className="col-6">February 3, 2016</dd>
-                                <dt className="col-6">No. of Campsites in 2019</dt>
-                                <dd className="col-6">563</dd>
+                                <dt className="col-6">Places to visit</dt>
+                                <dd className="col-6">63</dd>
                                 <dt className="col-6">No. of Reviews in 2019</dt>
                                 <dd className="col-6">4388</dd>
                                 <dt className="col-6">Employees</dt>
